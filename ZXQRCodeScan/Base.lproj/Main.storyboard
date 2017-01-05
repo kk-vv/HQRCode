@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7RJ-bn-XKp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmg-lm-D21">
+                                <rect key="frame" x="124" y="283.5" width="126" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GSf-K7-dtW"/>
+                                </constraints>
+                                <state key="normal" title="开始扫描(Push)"/>
+                                <connections>
+                                    <action selector="startScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZLd-z7-PEB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6x-XD-3cB">
+                                <rect key="frame" x="113.5" y="337.5" width="148" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2DO-v6-K61"/>
+                                </constraints>
+                                <state key="normal" title="开始扫描(Present)"/>
+                                <connections>
+                                    <action selector="startScan2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sMJ-9j-mcV"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LiA-En-AYJ">
+                                <rect key="frame" x="16" y="84" width="343" height="179.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dmg-lm-D21" firstAttribute="top" secondItem="LiA-En-AYJ" secondAttribute="bottom" constant="20" id="04R-h4-BZJ"/>
+                            <constraint firstItem="dmg-lm-D21" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8aW-Uu-qCo"/>
+                            <constraint firstItem="LiA-En-AYJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Lnc-1z-zUL"/>
+                            <constraint firstItem="dmg-lm-D21" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="PHa-wy-CzH"/>
+                            <constraint firstItem="X6x-XD-3cB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f1a-dW-zZV"/>
+                            <constraint firstItem="LiA-En-AYJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="pV1-rG-MBs"/>
+                            <constraint firstItem="X6x-XD-3cB" firstAttribute="top" secondItem="dmg-lm-D21" secondAttribute="bottom" constant="14" id="rbU-ex-uet"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LiA-En-AYJ" secondAttribute="trailing" id="usD-pI-IUX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1cq-lb-Sop"/>
+                    <connections>
+                        <outlet property="txtvResult" destination="LiA-En-AYJ" id="4wb-Qb-7ch"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118" y="778"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gFi-2h-OBp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7RJ-bn-XKp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xHl-i9-qQk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cW2-zl-31w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujS-J9-MRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="309.60000000000002" y="777.66116941529242"/>
+        </scene>
+    </scenes>
+</document>
