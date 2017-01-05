@@ -5,6 +5,13 @@
 - `二维码、条码扫描`
 - `Block 回调`
 
+##### `iOS10 注意设置相机权限：`
+
+- `Info.plist 设置`
+
+>
+Privacy - Camera Usage Description  : 需要您的相机来扫描二维码
+
 ##### `调用方式：`
 
 ```
