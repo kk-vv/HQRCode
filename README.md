@@ -23,4 +23,4 @@ Privacy - Camera Usage Description  : 需要您的相机来扫描二维码
 ##### `IMAGE`
 |IMG1|IMG2|
 |--------|--------|
-|![](https://github.com/iFallen/HQRCode/raw/master/ScreenShots/1.png)|![](https://github.com/iFallen/HQRCode/raw/master/ScreenShots/2.jpg)|
+|![](https://github.com/iFallen/HQRCode/raw/master/ScreenShots/1.png)|![](https://github.com/iFallen/HQRCode/raw/master/ScreenShots/2.png)|

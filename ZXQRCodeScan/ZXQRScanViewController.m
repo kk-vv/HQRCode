@@ -80,6 +80,17 @@
     // Do any additional setup after loading the view from its nib.
     checking = false;
     [self.scanFrame setBackgroundColor:[UIColor clearColor]];
+    //
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(s_enterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(s_enterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
+}
+
+- (void)s_enterBackground{
+    _animationImage.layer.timeOffset = CACurrentMediaTime();
+}
+
+- (void)s_enterForeground{
+    [self resumeAnimation];
 }
 
 
@@ -135,6 +146,7 @@
     if (_session && [_session isRunning]) {
         [_session stopRunning];
     }
+    [_animationImage.layer removeAllAnimations];
 }
 
 - (void)restartScan{
